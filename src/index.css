@@ -1,0 +1,11 @@
+body{
+  padding: 50px;
+  background-color: #ffb3b3;
+  font-family: fantasy;
+}
+
+#container{
+display:flex;
+justify-content: flex;
+
+}
