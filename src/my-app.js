@@ -1,4 +1,6 @@
 import React,{Component} from "react";
+import TodoItems from "./TodoItems";
+
 class TodoList extends Component {
   constructor(props){
     super(props);
@@ -19,10 +21,12 @@ class TodoList extends Component {
       return{
         items:prevState.items.concat(newItem)
       }
-    }
-
-    );
+    });
   }
+  this._inputElement.value ="";
+
+  e.preventDefault();
+
   }
   render(){
     return(
@@ -35,8 +39,10 @@ class TodoList extends Component {
             <button type = "submit">add</button>
           </form>
         </div>
+        <TodoItems entries ={this.state.items}/>
       </div>
     );
   }
 }
+
 export default TodoList;
