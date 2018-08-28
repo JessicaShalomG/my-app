@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import TodoItems from "./TodoItems";
+import Pictures from "./Pictures";
 import "./TodoList.css"
 
 
@@ -7,7 +8,8 @@ class TodoList extends Component {
   constructor(props){
     super(props);
     this.state={
-      items:[]
+      items:[],
+      pictures:[]
     };
 
     this.addItem = this.addItem.bind(this);
@@ -52,6 +54,8 @@ class TodoList extends Component {
         </div>
         <TodoItems entries ={this.state.items}
                    delete={this.deleteItem}/>
+        <Pictures entries ={this.state.pictures}/>
+
       </div>
     );
   }
